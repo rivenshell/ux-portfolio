@@ -7,7 +7,7 @@ const Hero = () => {
         <div aria-label="into">
           <p>Rivenshell Salomon</p>
           <p>Product Designer</p>
-          <h1 className=" text-4xl">
+          <h1 className=" lg:text-4xl md:text-2xl">
             Hey there! 👋 I’m a minimal Product Designer <br /> and App
             developer based in sunny <br /> Miami, FL.
           </h1>
