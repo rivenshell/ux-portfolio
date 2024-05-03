@@ -9,7 +9,7 @@ const Portfolio = () => {
           aria-label="Projects Page"
           className=" flex justify-center items-center text-4xl pt-4"
         >
-          Projects testing
+          Projects test
         </h1>
       </div>
     </>
