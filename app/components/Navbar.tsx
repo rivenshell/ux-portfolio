@@ -16,6 +16,7 @@ const Navbar = () => {
   return (
     <>
       <main className=" flex justify-center items-center pt-8">
+        {/* organize this */}
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>
