@@ -25,7 +25,7 @@ const Navbar = () => {
             </NavigationMenuItem>
             <NavigationMenuItem>
               <NavigationMenuTrigger>Work</NavigationMenuTrigger>
-              <NavigationMenuContent>
+              <NavigationMenuContent className=" flex justify-center items-center">
                 <NavigationMenuLink>Taco Store</NavigationMenuLink>
               </NavigationMenuContent>
             </NavigationMenuItem>
