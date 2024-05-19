@@ -1,6 +1,8 @@
 import React from "react"
 
 const Hero = () => {
+  // const BoldHeader =
+
   return (
     <>
       <div className=" flex justify-center items-center h-screen">
