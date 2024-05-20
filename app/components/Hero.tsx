@@ -7,7 +7,7 @@ const Hero = () => {
     <>
       <div className=" flex justify-center items-center h-screen">
         <div aria-label="into">
-          <p>Rivenshell Salomon</p>
+          <p>Riv Sal</p>
           <p>Product Designer</p>
           <h1 className=" lg:text-4xl md:text-2xl">
             Hey there! 👋 I’m a minimal Product Designer <br /> and App
