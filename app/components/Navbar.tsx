@@ -21,7 +21,7 @@ const Navbar = () => {
           <NavigationMenuList>
             <NavigationMenuItem>
               <NavigationMenuTrigger>Home</NavigationMenuTrigger>
-              <NavigationMenuContent>Testing</NavigationMenuContent>
+              <NavigationMenuContent>Testing2</NavigationMenuContent>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <NavigationMenuTrigger>Work</NavigationMenuTrigger>
