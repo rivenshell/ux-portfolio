@@ -25,11 +25,15 @@ const Navbar = () => {
             </NavigationMenuItem>
             <NavigationMenuItem>
               <NavigationMenuTrigger>Work</NavigationMenuTrigger>
-              <NavigationMenuContent>
+              <NavigationMenuContent className="flex justify-center">
                 <NavigationMenuLink>Taco Store</NavigationMenuLink>
               </NavigationMenuContent>
             </NavigationMenuItem>
-            <NavigationMenuLink>Get in Touch</NavigationMenuLink>
+            <NavigationMenuItem>
+              <NavigationMenuLink onClick={() => "herf"}>
+                Get in Touch
+              </NavigationMenuLink>
+            </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
       </main>
