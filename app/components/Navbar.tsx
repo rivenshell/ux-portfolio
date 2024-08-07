@@ -15,7 +15,7 @@ import {
 const Navbar = () => {
   return (
     <>
-      <main className=" flex justify-center items-center pt-8">
+      <main className=" flex justify-center items-center">
         {/* organize this */}
         <NavigationMenu>
           <NavigationMenuList>
