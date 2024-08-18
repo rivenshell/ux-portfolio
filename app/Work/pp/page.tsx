@@ -1,13 +1,13 @@
 import React from "react"
 
-const One = () => {
+const pp = () => {
   return (
     <>
       <div>
-        <b>testinglayouts</b>
+        <b>Plot points</b>
       </div>
     </>
   )
 }
 
-export default One
+export default pp
