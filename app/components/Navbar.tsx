@@ -15,7 +15,7 @@ import {
 const Navbar = () => {
   return (
     <>
-      <main className=" flex justify-center items-center pt-8">
+      <main className=" flex justify-center items-center">
         {/* organize this */}
         <NavigationMenu>
           <NavigationMenuList>
@@ -25,11 +25,15 @@ const Navbar = () => {
             </NavigationMenuItem>
             <NavigationMenuItem>
               <NavigationMenuTrigger>Work</NavigationMenuTrigger>
-              <NavigationMenuContent>
+              <NavigationMenuContent className="flex justify-center">
                 <NavigationMenuLink>Taco Store</NavigationMenuLink>
               </NavigationMenuContent>
             </NavigationMenuItem>
-            <NavigationMenuLink>Get in Touch</NavigationMenuLink>
+            <NavigationMenuItem>
+              <NavigationMenuLink onClick={() => "herf"}>
+                Get in Touch
+              </NavigationMenuLink>
+            </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
       </main>

@@ -4,7 +4,7 @@ import PortfolioCard from "./components/Portfolio"
 
 export default function Home() {
   return (
-    <main>
+    <main className=" p-9">
       <Navbar />
       <Hero />
       <PortfolioCard />
