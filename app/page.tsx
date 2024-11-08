@@ -7,7 +7,7 @@ export default function Home() {
     <main className=" p-9">
       <Navbar />
       <Hero />
-      <PortfolioCard />
+      {/* <PortfolioCard /> */}
     </main>
   )
 }
