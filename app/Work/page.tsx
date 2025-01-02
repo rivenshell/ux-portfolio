@@ -5,7 +5,7 @@ const Work = () => {
     <>
       <div>
         <div aria-label="title" className="">
-          Works
+          Works THIS IS A MUCH NEEDED UPDATE
         </div>
         <div aria-label="works"></div>
         <div aria-label="footer"></div>
