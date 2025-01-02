@@ -16,46 +16,12 @@ const Navbar = () => {
       <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem>
-            <NavigationMenuTrigger>Home</NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <ul className="grid w-[200px] gap-3 p-4">
-                <li>
-                  <NavigationMenuLink asChild>
-                    <Link
-                      className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                      href="/"
-                    >
-                      <div className="text-sm font-medium leading-none">
-                        Homepage
-                      </div>
-                      <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                        hi
-                      </p>
-                    </Link>
-                  </NavigationMenuLink>
-                </li>
-                <li>
-                  <NavigationMenuLink asChild>
-                    <Link
-                      className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                      href="/about"
-                    >
-                      <div className="text-sm font-medium leading-none">
-                        About
-                      </div>
-                      <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                        Learn more about me
-                      </p>
-                    </Link>
-                  </NavigationMenuLink>
-                </li>
-              </ul>
-            </NavigationMenuContent>
+            <NavigationMenuTrigger className="">Home</NavigationMenuTrigger>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <NavigationMenuTrigger>Work</NavigationMenuTrigger>
             <NavigationMenuContent>
-              <ul className="grid w-[200px] gap-3 p-4">
+              <ul className="grid w-[250px] gap-3 p-4">
                 <li>
                   <NavigationMenuLink asChild>
                     <Link
@@ -63,10 +29,11 @@ const Navbar = () => {
                       href="/work/taco-store"
                     >
                       <div className="text-sm font-medium leading-none">
-                        Taco Store
+                        aag --- Agencs Software
                       </div>
                       <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                        Check out our Taco Store project
+                        a web design and development studio aimed to support
+                        clents get from 0 to 1.
                       </p>
                     </Link>
                   </NavigationMenuLink>
@@ -78,10 +45,10 @@ const Navbar = () => {
                       href="/work/projects"
                     >
                       <div className="text-sm font-medium leading-none">
-                        Other Projects
+                        Outvoice
                       </div>
                       <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                        Explore our portfolio of projects
+                        An AI powred Invoice collecion SaaS
                       </p>
                     </Link>
                   </NavigationMenuLink>
