@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 
 const Three = () => {
   return (
@@ -7,7 +7,7 @@ const Three = () => {
         <h1>third project</h1>
       </main>
     </>
-  )
-}
+  );
+};
 
-export default Three
+export default Three;

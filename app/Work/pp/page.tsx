@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 
 const pp = () => {
   return (
@@ -7,7 +7,7 @@ const pp = () => {
         <b>Plot points</b>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default pp
+export default pp;

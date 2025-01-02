@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 
 const Connect = () => {
   return (
@@ -9,7 +9,7 @@ const Connect = () => {
         </div>
       </main>
     </>
-  )
-}
+  );
+};
 
-export default Connect
+export default Connect;

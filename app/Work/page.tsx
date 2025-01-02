@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 
 const Work = () => {
   return (
@@ -11,7 +11,7 @@ const Work = () => {
         <div aria-label="footer">riv... was here</div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Work
+export default Work;

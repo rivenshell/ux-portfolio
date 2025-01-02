@@ -1,5 +1,5 @@
-import React from "react"
+import React from "react";
 
 const PortfolioCard = () => {
-  return <div></div>
-}
+  return <div></div>;
+};

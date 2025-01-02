@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 
 const Mission = () => {
   return (
@@ -7,7 +7,7 @@ const Mission = () => {
         <body>Forward,</body>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Mission
+export default Mission;
