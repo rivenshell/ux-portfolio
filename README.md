@@ -1,6 +1,6 @@
-# portfolio
+# Product Design
 
 ## rivenshell salomon
 
 **about**
-`I craft lightweight, fast websites to propel clients form concept to launch. `
+User odsesed web products, build with developers and end users in mind.
