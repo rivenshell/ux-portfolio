@@ -126,8 +126,11 @@ const FilmRoll = ({ children }: { children: React.ReactNode }) => {
       overscroll(delta, true);
     };
 
-    // Touch: vertical swipes scroll natively. Sideways swipes are turned into
-    // scrolling by hand, with a glide after the finger lifts.
+    // Touch: every swipe, up/down or sideways, scrolls by hand with a glide
+    // after the finger lifts. Native touch scrolling only moves the roll a
+    // frame or more late (and iOS resizes the page as its toolbar hides),
+    // which made vertical swipes stutter. The section is touch-pinch-zoom so
+    // the browser doesn't also pan.
     let touchX = 0;
     let touchY = 0;
     let axis: "x" | "y" | null = null;
@@ -135,9 +138,15 @@ const FilmRoll = ({ children }: { children: React.ReactNode }) => {
     let lastMove = 0;
     let glideFrame = 0;
 
+    // Scroll and move the roll in the same frame, so it never lags behind.
+    const scrollRoll = (delta: number) => {
+      window.scrollBy(0, delta);
+      update();
+    };
+
     const glide = () => {
       velocity *= 0.95;
-      window.scrollBy(0, velocity * 16);
+      scrollRoll(velocity * 16);
       if (Math.abs(velocity) > 0.02 && !atStart() && !atEnd()) {
         glideFrame = requestAnimationFrame(glide);
       }
@@ -152,31 +161,31 @@ const FilmRoll = ({ children }: { children: React.ReactNode }) => {
       lastMove = e.timeStamp;
     };
     const onTouchMove = (e: TouchEvent) => {
+      if (e.touches.length > 1) return; // leave pinch-zoom to the browser
       const x = e.touches[0].clientX;
       const y = e.touches[0].clientY;
       const dx = touchX - x;
       const dy = touchY - y;
-      // Decide on the first move: later moves can't stop native scrolling.
+      // Lock to one axis per swipe so a slightly diagonal swipe doesn't wobble.
       if (!axis) axis = Math.abs(dx) > Math.abs(dy) ? "x" : "y";
+      const delta = axis === "x" ? dx : dy;
 
-      if (axis === "x") {
-        e.preventDefault();
-        window.scrollBy(0, dx);
-        // Capped so a jittery reading can't fling the whole roll.
-        velocity = Math.max(
-          -4,
-          Math.min(4, dx / Math.max(e.timeStamp - lastMove, 1)),
-        );
-        lastMove = e.timeStamp;
-      }
-      overscroll(axis === "x" ? dx : dy, false);
+      e.preventDefault();
+      scrollRoll(delta);
+      // Capped so a jittery reading can't fling the whole roll.
+      velocity = Math.max(
+        -4,
+        Math.min(4, delta / Math.max(e.timeStamp - lastMove, 1)),
+      );
+      lastMove = e.timeStamp;
+      overscroll(delta, false);
       touchX = x;
       touchY = y;
     };
     const onTouchEnd = (e: TouchEvent) => {
       springBack();
       // A finger that paused before lifting shouldn't fling.
-      if (axis === "x" && e.timeStamp - lastMove < 100) {
+      if (axis && e.timeStamp - lastMove < 100) {
         glideFrame = requestAnimationFrame(glide);
       }
     };
@@ -212,7 +221,7 @@ const FilmRoll = ({ children }: { children: React.ReactNode }) => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative">
+    <section ref={sectionRef} className="relative touch-pinch-zoom">
       <div className="sticky top-0 h-screen overflow-hidden">
         <div
           ref={trackRef}
