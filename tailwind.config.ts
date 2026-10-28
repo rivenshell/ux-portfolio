@@ -72,6 +72,10 @@ const config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      fontFamily: {
+        author: ["Author", "sans-serif"],
+        // add more fonts here as the base grows
+      }
     },
   },
   plugins: [require("tailwindcss-animate")],
