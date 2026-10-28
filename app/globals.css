@@ -74,3 +74,38 @@
       @apply bg-background text-foreground;
     }
   } */
+
+
+/**
+* @license
+*
+* Font Family: Author
+* Designed by: Satya Rajpurohit
+* URL: https://www.fontshare.com/fonts/author
+* © 2024 Indian Type Foundry
+*
+
+* Author Regular
+* Author Italic
+* Author Medium
+* Author MediumItalic
+
+*
+*/
+@font-face {
+    font-family: 'Author';
+    src: url('./fonts/Author-Regular.ttf') format('truetype');
+    font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+    font-family: 'Author';
+    src: url('./fonts/Author-Italic.ttf') format('truetype');
+    font-weight: 400; font-style: italic; font-display: swap;
+}
+@font-face {
+    font-family: 'Author';
+    src: url('./fonts/Author-MediumItalic.ttf') format('truetype');
+    font-weight: 500; font-style: italic; font-display: swap;
+}
+
+body { font-family: 'Author', sans-serif; }
