@@ -7,12 +7,21 @@ const Spacer = () => (
   />
 );
 
+const ScrollHint = () => (
+  <div
+    aria-hidden="true"
+    className="absolute bottom-8 left-1/2 -translate-x-1/2 w-6 h-11 rounded-full bg-neutral-200 flex justify-center pt-2"
+  >
+    <span className="w-1.5 h-3.5 rounded-full bg-blue-600 animate-bounce" />
+  </div>
+);
+
 const Hero = () => {
   // const BoldHeader =
 
   return (
     <>
-      <div className=" flex justify-center items-center min-h-[80vh]">
+      <div className="relative flex justify-center items-center h-full">
         <div aria-label="into">
           <p className="font-author font-medium italic">Riv Salomon</p>
           <p className="font-author font italic">Product Designer</p>
@@ -22,6 +31,7 @@ const Hero = () => {
             developer based <Spacer /> in sunny <br /> Miami, FL.
           </h1>
         </div>
+        <ScrollHint />
       </div>
     </>
   );

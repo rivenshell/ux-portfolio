@@ -15,7 +15,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    // overscroll-none: FilmRoll does its own sideways bounce, and sideways
+    // swipes move the roll instead of navigating back/forward.
+    <html lang="en" className="overscroll-none">
       <body className={inter.className}>{children}</body>
     </html>
   );
